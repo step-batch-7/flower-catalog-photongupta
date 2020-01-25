@@ -1,0 +1,25 @@
+body {
+  margin: 5%;
+}
+
+h1 {
+  text-align: right;
+  font-family: sans-serif;
+  margin-right: 15%;
+  color: rgb(245, 168, 68);
+}
+
+.flowerDetail {
+  display: flex;
+}
+
+.flower {
+}
+
+.links {
+  margin-top: 20%;
+}
+
+.waterJar {
+  margin-left: 50%;
+}

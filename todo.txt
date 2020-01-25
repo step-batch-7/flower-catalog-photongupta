@@ -1,0 +1,3 @@
+--DONE-- touch the home.html,home.js and home.css file 
+--DONE-- make the home page with flower and all required things
+* make the water jar disappear for 1 second on clicking on that 
