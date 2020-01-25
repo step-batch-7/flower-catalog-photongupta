@@ -2,11 +2,16 @@ body {
   margin: 5%;
 }
 
-h1 {
+.heading {
+  font-size: 40px;
   text-align: right;
   font-family: sans-serif;
   margin-right: 15%;
   color: rgb(245, 168, 68);
+}
+
+.flowerName {
+  text-align: center;
 }
 
 .flowerDetail {
@@ -24,4 +29,11 @@ h1 {
 
 .waterJar {
   margin-left: 50%;
+}
+
+.description {
+  margin-left: 2%;
+  margin-top: 25%;
+  text-align: justify;
+  text-justify: inter-word;
 }

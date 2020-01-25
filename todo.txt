@@ -1,7 +1,10 @@
 --DONE-- touch the home.html,home.js and home.css file 
 --DONE-- make the home page with flower and all required things
 --DONE-- make the water jar disappear for 1 second on clicking on that 
-* make the Abeliophyllum flower page with flower and all required things
-* make the Ageratum flower page with flower and all required things
-* allow the user to come back on the home page by clicking on <<
-* allow the user to go on Abeliophyllum and  Ageratum page on clicking link from home page
+--DONE-- make the Abeliophyllum flower page with flower and all required things
+--DONE-- make the Ageratum flower page with flower and all required things
+--DONE-- allow the user to come back on the home page by clicking on <<
+--DONE-- allow the user navigate from home page to Abeliophyllum and  Ageratum page
+ * make the guest book page 
+ * allow the user to navigate between home page and guest book page.
+ 
