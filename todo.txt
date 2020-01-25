@@ -8,6 +8,10 @@
 --DONE-- make the guest book page 
 --DONE-- allow the user to navigate between home page and guest book page.
 --DONE-- make the server
+--DONE-- extract the class into the files
 
-* arrange all the files and directories
-* extract the class into the files
+--DONE-- after submitting the comment, comment should save in the json file
+--DONE-- comment history should have the date and timing also
+*after submitting the comment, comment should appear in the comment box
+*previous comments should be present in the comment box
+*order of comments in the comment box should be reverse of the sequence of there entry

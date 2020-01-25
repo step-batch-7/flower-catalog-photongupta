@@ -2,6 +2,7 @@ const {Server} = require('net');
 const fs = require('fs');
 const Request = require('./lib/request');
 const Response = require('./lib/response');
+const {addComment} = require('./lib/AddComment');
 
 const CONTENT_TYPES = {
   html: 'text/html',
@@ -11,9 +12,8 @@ const CONTENT_TYPES = {
   gif: 'image/gif'
 };
 
-const servePage = req => {
-  console.log(req.url);
-  const path = `${__dirname}${req.url}`;
+const servePage = function(req) {
+  const path = `${__dirname}/public${req.url}`;
   const content = fs.readFileSync(path);
   const extension = req.url.split('.').reverse()[0];
   const res = new Response();
@@ -24,13 +24,20 @@ const servePage = req => {
   return res;
 };
 
-const findHandler = req => {
+const findHandler = function(req) {
   if (req.method === 'GET' && req.url === '/') {
-    req.url = '/home.html';
-    return servePage;
+    req.url = '/index.html';
   }
   if (req.method === 'GET') return servePage;
   return () => new Response();
+};
+
+const handleData = function(text, socket) {
+  const req = Request.parse(text);
+  if (req.query) addComment(req);
+  const handler = findHandler(req);
+  const res = handler(req);
+  res.writeTo(socket);
 };
 
 const handleConnection = function(socket) {
@@ -39,16 +46,10 @@ const handleConnection = function(socket) {
   socket.on('close', () => console.warn(`${remote} closed `));
   socket.on('end', () => console.warn(`${remote} ended`));
   socket.on('error', err => console.error('Error', err));
-  socket.on('data', text => {
-    console.warn(`${remote} data =>\n`);
-    const req = Request.parse(text);
-    const handler = findHandler(req);
-    const res = handler(req);
-    res.writeTo(socket);
-  });
+  socket.on('data', text => handleData(text, socket));
 };
 
-const main = port => {
+const main = function(port = 8000) {
   const server = new Server();
   server.on('connection', handleConnection);
   server.on('listening', () =>
