@@ -13,7 +13,9 @@ h1 {
   display: flex;
 }
 
-.flower {
+.jarBlock {
+  height: 80px;
+  width: 80px;
 }
 
 .links {

@@ -1,3 +1,7 @@
 --DONE-- touch the home.html,home.js and home.css file 
 --DONE-- make the home page with flower and all required things
-* make the water jar disappear for 1 second on clicking on that 
+--DONE-- make the water jar disappear for 1 second on clicking on that 
+* make the Abeliophyllum flower page with flower and all required things
+* make the Ageratum flower page with flower and all required things
+* allow the user to come back on the home page by clicking on <<
+* allow the user to go on Abeliophyllum and  Ageratum page on clicking link from home page
