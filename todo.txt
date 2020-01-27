@@ -18,8 +18,8 @@
 --DONE-- format the name and comment
 --DONE-- arrange the file and directories
 --DONE-- implement post request 
+--DONE-- replace all the encoded character to original one from every new comment
 
-* replace all the encoded character to original one from every new comment
 * review the code 
 
 
