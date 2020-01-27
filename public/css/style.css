@@ -45,7 +45,6 @@ body {
 }
 
 .submitButton {
-  /* background-color: rgb(180, 180, 180); */
   border-radius: 5px;
   height: 30px;
   width: 78px;
@@ -68,6 +67,7 @@ body {
   margin: 10px;
   font-style: italic;
   font-size: medium;
+  text-align: right;
 }
 
 .commentDetailBox {
@@ -85,7 +85,7 @@ body {
   margin: 10px;
   border: 1px solid black;
   border-radius: 10px;
-  width: 40vw;
+  width: 85vw;
   height: 10vw;
 }
 

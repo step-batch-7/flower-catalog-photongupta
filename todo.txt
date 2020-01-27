@@ -14,8 +14,12 @@
 --DONE-- after submitting the comment, comment should appear in the comment box
 --DONE-- previous comments should be present in the comment box
 --DONE-- order of comments in the comment box should be reverse of the sequence of their entry
+--DONE-- format the date 
+--DONE-- format the name and comment
+--DONE-- arrange the file and directories
+--DONE-- implement post request 
 
-* format the date 
-* refactor the code
+* replace all the encoded character to original one from every new comment
+* review the code 
 
 
