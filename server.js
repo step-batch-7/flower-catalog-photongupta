@@ -3,6 +3,7 @@ const fs = require('fs');
 const Request = require('./lib/request');
 const Response = require('./lib/response');
 const {addComment} = require('./lib/AddComment');
+const {commentDetail, guestBook} = require('./templates/template');
 
 const CONTENT_TYPES = {
   html: 'text/html',
@@ -24,11 +25,36 @@ const servePage = function(req) {
   return res;
 };
 
+const serveTemplate = function(req) {
+  const comments = JSON.parse(fs.readFileSync('dataBase/commentDetail.json'));
+  let allComments = '';
+  comments.forEach(comment => {
+    allComments += commentDetail.allReplace({
+      __date__: comment.date,
+      __name__: comment.name,
+      __comment__: comment.comment
+    });
+  });
+  content = guestBook.replace('__comments__', allComments);
+  const extension = req.url.split('.').reverse()[0];
+  const res = new Response();
+  res.setHeader('Content-Type', CONTENT_TYPES[extension]);
+  res.setHeader('Content-Length', content.length);
+  res.statusCode = 200;
+  res.body = content;
+  return res;
+};
+
 const findHandler = function(req) {
-  if (req.method === 'GET' && req.url === '/') {
-    req.url = '/index.html';
+  if (req.method === 'GET') {
+    if (req.url === '/') {
+      req.url = '/index.html';
+    }
+    if (req.url === '/guestBook.html') {
+      return serveTemplate;
+    }
+    return servePage;
   }
-  if (req.method === 'GET') return servePage;
   return () => new Response();
 };
 

@@ -45,8 +45,66 @@ body {
 }
 
 .submitButton {
-  background-color: rgb(180, 180, 180);
+  /* background-color: rgb(180, 180, 180); */
   border-radius: 5px;
+  height: 30px;
+  width: 78px;
+  margin-left: 15%;
+  background-color: rgba(0, 0, 0, 0.11);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.name {
+  margin-top: -2px;
+  margin-left: 10px;
+  color: rgb(22, 43, 224);
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.commentDate {
+  margin: 10px;
+  font-style: italic;
+  font-size: medium;
+}
+
+.commentDetailBox {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 10px;
+  border: 1px solid black;
+  height: 23vw;
+  overflow: scroll;
+  border-radius: 10px;
+}
+
+.commentDetail {
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 40vw;
+  height: 10vw;
+}
+
+.icon {
+  margin-left: 2%;
+}
+.subscriber {
+  padding: 5px;
+  display: flex;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+
+  justify-content: left;
+  background-image: linear-gradient(rgb(250, 250, 250), rgb(200, 200, 200));
   height: 25px;
-  width: 75px;
+}
+.comment {
+  margin-left: 5%;
+  height: 10vw;
+  overflow: scroll;
+  height: 4vw;
 }
