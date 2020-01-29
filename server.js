@@ -1,12 +1,13 @@
 const http = require('http');
-const {handleData} = require('./lib/app');
+const {findHandler} = require('./lib/app');
 
 const handleRequest = function(req, res) {
   const remote = `req from port ${req.socket.remotePort}`;
   req.setEncoding('utf8');
   req.on('close', () => console.warn(`${remote}:closed `));
   req.on('error', err => console.error('Error', err));
-  handleData(req, res);
+  const handler = findHandler(req);
+  handler(req, res);
 };
 
 const main = function(port = 8000) {
