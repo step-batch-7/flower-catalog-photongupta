@@ -20,6 +20,9 @@
 --DONE-- implement post request 
 --DONE-- replace all the encoded character to original one from every new comment
 
-* review the code 
+--DONE-- review the code 
+--DONE-- change into http
+
+ * review the code
 
 
