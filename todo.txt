@@ -22,7 +22,5 @@
 
 --DONE-- review the code 
 --DONE-- change into http
-
- * review the code
-
-
+--DONE-- add eslint
+--DONE-- refactor the code

@@ -1,0 +1,26 @@
+{
+  "name": "flowercatalogweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "eslint lib/*.js *.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/step-batch-7/flower-catalog-photongupta.git"
+  },
+  "author": "Rashmi Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/step-batch-7/flower-catalog-photongupta/issues"
+  },
+  "homepage": "https://github.com/step-batch-7/flower-catalog-photongupta#readme",
+  "dependencies": {
+    "eslint": "^6.8.0"
+  }
+}
