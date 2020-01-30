@@ -67,5 +67,16 @@
     "semi-spacing": "error",
     "no-multiple-empty-lines": ["error", {"max": 1}],
     "no-param-reassign": "error"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["public/scripts/*.js"],
+      "rules": {
+        "no-unused-vars": "off",
+        "no-extra-parens": "off",
+        "no-magic-numbers": "off",
+        "no-undef": "off"
+      }
+    }
+  ]
 }
