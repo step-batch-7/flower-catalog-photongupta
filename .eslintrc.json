@@ -60,23 +60,12 @@
     "no-proto": "error",
     "prefer-spread": "warn",
     "no-useless-call": "error",
-    "space-infix-ops": ["error", {"int32Hint": false}],
-    "no-multi-spaces": "error",
-    "block-spacing": "error",
-    "object-curly-spacing": "error",
-    "semi-spacing": "error",
-    "no-multiple-empty-lines": ["error", {"max": 1}],
-    "no-param-reassign": "error"
-  },
-  "overrides": [
-    {
-      "files": ["public/scripts/*.js"],
-      "rules": {
-        "no-unused-vars": "off",
-        "no-extra-parens": "off",
-        "no-magic-numbers": "off",
-        "no-undef": "off"
-      }
-    }
-  ]
+    "space-infix-ops": ["error", { "int32Hint": false }],
+    "no-multi-spaces":"error",
+    "block-spacing":"error",
+    "object-curly-spacing":"error",
+    "semi-spacing":"error",
+    "no-multiple-empty-lines":["error",{"max":1}],
+    "no-param-reassign" : "error"
+  }
 }
