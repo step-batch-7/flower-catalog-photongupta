@@ -7,8 +7,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "eslint lib/*.js *.js",
-    "start": "node server.js"
+    "test": "export dataBase=/Users/step29/my_work/html/flowerCatalogWeb/test/comment.json;nyc mocha",
+    "start": "export dataBase=/Users/step29/my_work/html/flowerCatalogWeb/dataBase/commentDetail.json;node server.js"
   },
   "repository": {
     "type": "git",
