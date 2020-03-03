@@ -2,7 +2,7 @@
 
 const http = require('http');
 const {app} = require('./lib/handler');
-const defaultPort = 5000;
+const defaultPort = 9000;
 
 const main = function(port = defaultPort) {
   const server = http.createServer();

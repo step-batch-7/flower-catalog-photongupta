@@ -19,7 +19,6 @@ describe('GET /guestBook.html', function() {
       .get('/guestBook.html')
       .set('Accept', '*/*')
       .expect('Content-Type', 'text/html')
-      // .expect('Content-Length', '1946')
       .expect(200, done);
   });
 });
